@@ -1,6 +1,6 @@
 # python-alelo
 
-[![Build status](https://dev.azure.com/ricardobchaves/Ricardo/_apis/build/status/python-alelo/python-alelo)](https://dev.azure.com/ricardobchaves/Ricardo/_build/latest?definitionId=22) [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/2aed0b458670411c800954bcce1ab8e6)](https://www.codacy.com/manual/ricardochaves/python-alelo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ricardochaves/python-alelo&amp;utm_campaign=Badge_Coverage) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/2aed0b458670411c800954bcce1ab8e6)](https://www.codacy.com/manual/ricardochaves/python-alelo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ricardochaves/python-alelo&amp;utm_campaign=Badge_Grade) [![Updates](https://pyup.io/repos/github/ricardochaves/python-alelo/shield.svg)](https://pyup.io/repos/github/ricardochaves/python-alelo/) [![Python 3](https://pyup.io/repos/github/ricardochaves/python-alelo/python-3-shield.svg)](https://pyup.io/repos/github/ricardochaves/python-alelo/) [![Maintainability](https://api.codeclimate.com/v1/badges/0128ad980aa5f18fa280/maintainability)](https://codeclimate.com/github/ricardochaves/python-alelo/maintainability) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black) [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/ricardochaves/python-alelo/blob/master/LICENSE)
+[![Build status](https://dev.azure.com/ricardobchaves/Ricardo/_apis/build/status/python-alelo/python-alelo)](https://dev.azure.com/ricardobchaves/Ricardo/_build/latest?definitionId=22) [![Codacy Badge](https://api.codacy.com/project/badge/Coverage/2aed0b458670411c800954bcce1ab8e6)](https://www.codacy.com/manual/ricardochaves/python-alelo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ricardochaves/python-alelo&amp;utm_campaign=Badge_Coverage) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/2aed0b458670411c800954bcce1ab8e6)](https://www.codacy.com/manual/ricardochaves/python-alelo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ricardochaves/python-alelo&amp;utm_campaign=Badge_Grade) [![Updates](https://pyup.io/repos/github/ricardochaves/python-alelo/shield.svg)](https://pyup.io/repos/github/ricardochaves/python-alelo/) [![Python 3](https://pyup.io/repos/github/ricardochaves/python-alelo/python-3-shield.svg)](https://pyup.io/repos/github/ricardochaves/python-alelo/) [![Maintainability](https://api.codeclimate.com/v1/badges/0128ad980aa5f18fa280/maintainability)](https://codeclimate.com/github/ricardochaves/python-alelo/maintainability) [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black) [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/ricardochaves/python-alelo/blob/master/LICENSE) [![PyPI version](https://badge.fury.io/py/python-alelo.svg)](https://badge.fury.io/py/python-alelo)
 
 ---
 A Alelo ainda não tem uma API para a gente pegar os nossos dados. Por isso fiz essa lib para poder melhorar o meu [financeiro-bot](https://github.com/ricardochaves/financeiro-bot)
@@ -37,7 +37,56 @@ print(s["statement"]["balance"])
 O retorno do `get_transactions` é assim, esse é o retorno real do meu cartão:
 
 ```json
-{'transactions': [{'date': '22/11', 'value': 5.1, 'moneyType': 'R$', 'type': 'DEBIT', 'icon': 'shopping', 'description': 'Pao To Go', 'virtualCard': False}, {'date': '15/11', 'value': 84, 'moneyType': 'R$', 'type': 'DEBIT', 'icon': 'shopping', 'description': 'VIA POMPEIA', 'virtualCard': False}, {'date': '14/11', 'value': 30, 'moneyType': 'R$', 'type': 'DEBIT', 'icon': 'shopping', 'description': 'T B B VILA OLIMPIA RES', 'virtualCard': False}, {'date': '11/11', 'value': 43.8, 'moneyType': 'R$', 'type': 'DEBIT', 'icon': 'shopping', 'description': 'KADALORA PIZZARIA', 'virtualCard': False}, {'date': '10/11', 'value': 5.9, 'moneyType': 'R$', 'type': 'DEBIT', 'icon': 'shopping', 'description': 'STARBUCKS 008-ELDORADO', 'virtualCard': False}], 'average': 33.76}
+{
+   "transactions":[
+      {
+         "date":"22/11",
+         "value":5.1,
+         "moneyType":"R$",
+         "type":"DEBIT",
+         "icon":"shopping",
+         "description":"Pao To Go",
+         "virtualCard":false
+      },
+      {
+         "date":"15/11",
+         "value":84,
+         "moneyType":"R$",
+         "type":"DEBIT",
+         "icon":"shopping",
+         "description":"VIA POMPEIA",
+         "virtualCard":false
+      },
+      {
+         "date":"14/11",
+         "value":30,
+         "moneyType":"R$",
+         "type":"DEBIT",
+         "icon":"shopping",
+         "description":"T B B VILA OLIMPIA RES",
+         "virtualCard":false
+      },
+      {
+         "date":"11/11",
+         "value":43.8,
+         "moneyType":"R$",
+         "type":"DEBIT",
+         "icon":"shopping",
+         "description":"KADALORA PIZZARIA",
+         "virtualCard":false
+      },
+      {
+         "date":"10/11",
+         "value":5.9,
+         "moneyType":"R$",
+         "type":"DEBIT",
+         "icon":"shopping",
+         "description":"STARBUCKS 008-ELDORADO",
+         "virtualCard":false
+      }
+   ],
+   "average":33.76
+}
 ```
 
 ## Opções
