@@ -1,3 +1,7 @@
 pyflakes:
   disable:
   - F999
+
+pep8:
+  disable:
+  - E901
