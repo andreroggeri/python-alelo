@@ -1,6 +1,6 @@
 # python-alelo
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/2aed0b458670411c800954bcce1ab8e6)](https://www.codacy.com/manual/ricardochaves/python-alelo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ricardochaves/python-alelo&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Coverage/2aed0b458670411c800954bcce1ab8e6)](https://www.codacy.com/manual/ricardochaves/python-alelo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ricardochaves/python-alelo&amp;utm_campaign=Badge_Coverage) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/2aed0b458670411c800954bcce1ab8e6)](https://www.codacy.com/manual/ricardochaves/python-alelo?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ricardochaves/python-alelo&amp;utm_campaign=Badge_Grade)
 
 A Alelo ainda não tem uma API para a gente pegar os nossos dados. Por isso fiz essa lib para poder melhorar o meu [financeiro-bot](https://github.com/ricardochaves/financeiro-bot)
 
