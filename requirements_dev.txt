@@ -1,6 +1,6 @@
 -r requirements.txt
-coverage
-requests-mock
-tox
-pytest
-pytest-cov
+coverage==4.5.4
+requests-mock==1.7.0
+tox==3.14.1
+pytest==5.3.0
+pytest-cov==2.8.1
