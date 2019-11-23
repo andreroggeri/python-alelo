@@ -9,7 +9,7 @@ from requests import Response
 
 import jwt
 
-HOST = "https://www.meualelo.com.br"
+HOST = "https://www.meualelo.com.br/api/meualelo-web-api"
 
 
 class TransactionsTime(Enum):
@@ -33,9 +33,7 @@ class Alelo:
 
             json_data = {"cpf": self.cpf, "password": self.pwd, "captcha": ""}
             response = requests.post(
-                f"{HOST}/api/meualelo-web-api/s/p/authentication/login",
-                json=json_data,
-                headers={"x-api-key": self._get_api_key()},
+                f"{HOST}/s/p/authentication/login", json=json_data, headers={"x-api-key": self._get_api_key()}
             )
 
             self.token = self._handle_response(response)["token"]
@@ -52,20 +50,20 @@ class Alelo:
 
     def get_cards(self) -> Dict:
 
-        response = requests.get(f"{HOST}/api/meualelo-web-api/s/card", headers=self._get_headers())
+        response = requests.get(f"{HOST}/s/card", headers=self._get_headers())
 
         return self._handle_response(response)
 
     def get_statement(self, card_id: str) -> Dict:
 
-        response = requests.get(f"{HOST}/api/meualelo-web-api/s/card/{card_id}/statement", headers=self._get_headers())
+        response = requests.get(f"{HOST}/s/card/{card_id}/statement", headers=self._get_headers())
 
         return self._handle_response(response)
 
     def get_transactions(self, card_id: str, period: TransactionsTime = TransactionsTime.LAST_FIVE) -> Dict:
 
         response = requests.get(
-            f"{HOST}/api/meualelo-web-api/s/card/{card_id}/statement/transactions?period={period.name}&cardType=REFEICAO",
+            f"{HOST}/s/card/{card_id}/statement/transactions?period={period.name}&cardType=REFEICAO",
             headers=self._get_headers(),
         )
 
