@@ -11,7 +11,7 @@ os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
     name="python_alelo",
-    version="0.0.1",
+    version="0.0.2",
     description="Alelo API",
     long_description=README,
     long_description_content_type="text/markdown",
@@ -28,7 +28,6 @@ setup(
         "Programming Language :: Python :: 3.7",
         "Environment :: Web Environment",
         "Natural Language :: Portuguese (Brazilian)",
-        "Topic :: Internet :: WWW/HTTP :: WSGI :: Middleware",
         "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
