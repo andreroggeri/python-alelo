@@ -1,7 +1,6 @@
 import unittest
 
 import requests_mock
-
 from python_alelo.alelo import Alelo
 
 

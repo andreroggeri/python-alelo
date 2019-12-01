@@ -4,10 +4,9 @@ from enum import Enum
 from typing import Dict
 from typing import Optional
 
+import jwt
 import requests
 from requests import Response
-
-import jwt
 
 HOST = "https://www.meualelo.com.br/api/meualelo-web-api"
 
