@@ -10,8 +10,8 @@ with open(os.path.join(os.path.dirname(__file__), "README.md")) as readme:
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
-    name="python_alelo",
-    version="2.0.0",
+    name="python-alelo",
+    version="2.0.1",
     description="Alelo API",
     long_description=README,
     long_description_content_type="text/markdown",
