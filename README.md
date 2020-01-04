@@ -5,8 +5,6 @@
 ---
 A Alelo ainda não tem uma API para a gente pegar os nossos dados. Por isso fiz essa lib para poder melhorar o meu [financeiro-bot](https://github.com/ricardochaves/financeiro-bot)
 
-Funciona apenas com vale refeição Alelo, esse é o único cartão que eu tenho. 
-
 Contribuições são bem vindas para colocar outros cartões.
 
 ## Como usar
