@@ -15,21 +15,23 @@ Para instalar `pip install python-alelo`
 
 ```python
 from python_alelo.alelo import Alelo
+from python_alelo.alelo import Card
+from typing import List
 
 a = Alelo(cpf="SEU-CPF", pwd="SUA-SENHA")
 a.login()
 
 # Você precisa pegar os seus cartões para pegar o id deles
-cards = a.get_cards()
+cards: List[Card] = a.get_cards()
 
-# Pega o id do card que vc quser na lista
-id = cards[0]["id"]
+# Pega o primeiro card
+card: Card = cards[0]
 
 # Pega todas as cinco últimas transações
-print(a.get_transactions(id))
+print(a.get_transactions(card))
 
 # Para pegar o saldo do cartão
-s = a.get_statement(id)
+s = a.get_statement(card.id)
 print(s["statement"]["balance"])
 
 ```
@@ -96,10 +98,10 @@ Para pegar mais transações vc pode fazer assim:
 ```python
 from python_alelo.alelo import TransactionsTime
 
-a.get_transactions(id, TransactionsTime.LAST_FIVE)
-a.get_transactions(id, TransactionsTime.LAST_FIFTY_DAYS)
-a.get_transactions(id, TransactionsTime.LAST_MONTH)
-a.get_transactions(id, TransactionsTime.LAST_THREE_MONTHS)
-a.get_transactions(id, TransactionsTime.LAST_FOUR_MONTHS)
+a.get_transactions(card, TransactionsTime.LAST_FIVE)
+a.get_transactions(card, TransactionsTime.LAST_FIFTY_DAYS)
+a.get_transactions(card, TransactionsTime.LAST_MONTH)
+a.get_transactions(card, TransactionsTime.LAST_THREE_MONTHS)
+a.get_transactions(card, TransactionsTime.LAST_FOUR_MONTHS)
 
 ```

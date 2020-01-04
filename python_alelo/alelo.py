@@ -2,13 +2,23 @@ import datetime
 import os
 from enum import Enum
 from typing import Dict
+from typing import List
 from typing import Optional
 
-import jwt
 import requests
 from requests import Response
 
+import jwt
+
 HOST = "https://www.meualelo.com.br/api/meualelo-web-api"
+
+
+class Card:
+    def __init__(self, card_data: Dict):
+        self.name = card_data["name"]
+        self.last_numbers = card_data["lastNumbers"]
+        self.card_type = card_data["type"]
+        self.card_id = card_data["id"]
 
 
 class TransactionsTime(Enum):
@@ -47,11 +57,13 @@ class Alelo:
 
         return {"x-api-key": self._get_api_key(), "authorization": self._get_token()}
 
-    def get_cards(self) -> Dict:
+    def get_cards(self) -> List[Card]:
 
         response = requests.get(f"{HOST}/s/card", headers=self._get_headers())
 
-        return self._handle_response(response)
+        cards_data = self._handle_response(response)
+
+        return [Card(d) for d in cards_data]
 
     def get_statement(self, card_id: str) -> Dict:
 
@@ -59,10 +71,10 @@ class Alelo:
 
         return self._handle_response(response)
 
-    def get_transactions(self, card_id: str, period: TransactionsTime = TransactionsTime.LAST_FIVE) -> Dict:
+    def get_transactions(self, card: Card, period: TransactionsTime = TransactionsTime.LAST_FIVE) -> Dict:
 
         response = requests.get(
-            f"{HOST}/s/card/{card_id}/statement/transactions?period={period.name}&cardType=REFEICAO",
+            f"{HOST}/s/card/{card.card_id}/statement/transactions?period={period.name}&cardType={card.card_type}",
             headers=self._get_headers(),
         )
 
