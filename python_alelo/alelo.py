@@ -97,8 +97,8 @@ class Alelo:
         payload = {
             "iss": "meualelo.alelo.com.br",
             "sub": "meualelo",
-            "fnp": "91a646d8f05e17d9d92ab32f711d3579",
-            "src": "WEB",
+            "fnp": "619ec0ac1129beae",
+            "src": "APP",
             "exp": datetime.datetime.utcnow() + datetime.timedelta(days=1),
         }
 
