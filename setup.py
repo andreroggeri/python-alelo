@@ -20,7 +20,7 @@ setup(
     license="MIT",
     url="https://github.com/ricardochaves/python-alelo",
     packages=find_packages(),
-    install_requires=[],
+    install_requires=['PyJWT', 'requests'],
     classifiers=[
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
